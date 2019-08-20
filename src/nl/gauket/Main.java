@@ -10,7 +10,7 @@ public class Main {
 //        binaryTree.addNode(20);
 
 
-        int x = 10_000;
+        int x = 5000;
         BinaryTree binaryTree1 = new BinaryTree(x);
         binaryTree1.createFixedTree(x*2);
 
