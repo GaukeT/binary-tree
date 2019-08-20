@@ -10,7 +10,7 @@ public class BinaryTree {
         this.root = new Node(rootValue);
     }
 
-    public Node getRoot() {
+    public Node getRootNode() {
         return root;
     }
 
