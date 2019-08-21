@@ -3,7 +3,7 @@ package nl.gauket;
 public class Main {
 
     public static void main(String[] args) {
-        int rootValue = 50_000;
+        int rootValue = 15_000;
 
         BinaryTree fixedBinaryTree = new BinaryTree(rootValue);
         fixedBinaryTree.createBinaryTree(rootValue*2, BinaryTree.TreeType.FIXED);
@@ -29,5 +29,6 @@ public class Main {
             System.out.println("Node: null");
         }
         System.out.println("Search steps: " + Node.getCounter() + "\n");
+        Node.resetCounter();
     }
 }

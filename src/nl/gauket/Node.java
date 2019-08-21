@@ -38,6 +38,10 @@ public class Node {
         return counter;
     }
 
+    public static void resetCounter() {
+        counter = 0;
+    }
+
     public Node search(int value) {
         return search(value, this);
     }
