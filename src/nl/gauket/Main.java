@@ -22,7 +22,7 @@ public class Main {
         //Node node = binaryTree.getRootNode().search(searchValue);
         Node node = Node.search(searchValue, tree.getRootNode());
 
-        System.out.println("Search in " + tree.getType() + " tree took: " + (System.currentTimeMillis() - start) + " (ms)");
+        System.out.println("Search in " + tree.getType() + " binary tree took: " + (System.currentTimeMillis() - start) + " (ms)");
         if (node != null) {
             System.out.println("Node: " + node.toString());
         } else {
