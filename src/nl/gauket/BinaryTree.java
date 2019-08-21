@@ -30,7 +30,6 @@ public class BinaryTree {
             while (true) {
                 parent = focusNode;
 
-                // TODO: use 'find(value)' method for check on duplicate value + extract from loop
                 if (value == focusNode.getValue()) {
                     System.out.println("Value already exist in tree: " + value);
                     break;
