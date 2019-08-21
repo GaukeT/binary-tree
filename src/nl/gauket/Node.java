@@ -38,51 +38,29 @@ public class Node {
         return counter;
     }
 
-    public Node find(int value) {
-        return find(value, this);
-    }
-
-    public static Node find(int value, Node node) {
-        ++counter;
-
-        // check if node exists
-        if (node == null) {
-            return null;
-        }
-
-        // check if this node is the node you're looking for
-        if (node.getValue() == value) {
-            return node;
-        }
-
-        // consider left or right
-        if (value > node.getValue()) {
-            // right node
-            return Node.find(value, node.getRight());
-        } else {
-            // left node
-            return Node.find(value, node.getLeft());
-        }
-    }
-
     public Node search(int value) {
-        Node node = this;
+        return search(value, this);
+    }
+
+    public static Node search(int value, Node node) {
+        Node focusNode = node;
 
         while (true) {
-            if (node == null) {
+            ++counter;
+            if (focusNode == null) {
                 return null;
             }
 
-            if (value == node.getValue()) {
-                return node;
+            if (value == focusNode.getValue()) {
+                return focusNode;
             }
 
-            if (value < node.getValue()) {
+            if (value < focusNode.getValue()) {
                 // use left node
-                node = node.getLeft();
+                focusNode = focusNode.getLeft();
             } else {
                 // use right node
-                node = node.getRight();
+                focusNode = focusNode.getRight();
             }
         }
     }
