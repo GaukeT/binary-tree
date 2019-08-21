@@ -50,16 +50,16 @@ public class BinaryTree {
         }
     }
 
-    public void createRandomTree(int length) {
-        for (int i = 0; i <= length; i++) {
+    public void createRandomTree(int height) {
+        for (int i = 0; i <= height; i++) {
             int value = new Random().nextInt(Integer.MAX_VALUE);
             this.addNode(value);
         }
     }
 
-    public void createFixedTree(int length) {
-        int node = length;
-        for (int i = 1; i <= length; i++) {
+    public void createFixedTree(int height) {
+        int node = height;
+        for (int i = 1; i <= height; i++) {
             this.addNode(node);
             node--;
         }

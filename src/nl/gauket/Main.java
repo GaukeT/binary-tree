@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         long startCreate = System.currentTimeMillis();
 
-        int rootValue = 5000;
+        int rootValue = 10_000;
         BinaryTree binaryTree = new BinaryTree(rootValue);
         binaryTree.createFixedTree(rootValue*2);
 
