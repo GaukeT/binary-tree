@@ -65,6 +65,28 @@ public class Node {
         }
     }
 
+    public Node search(int value) {
+        Node node = this;
+
+        while (true) {
+            if (node == null) {
+                return null;
+            }
+
+            if (value == node.getValue()) {
+                return node;
+            }
+
+            if (value < node.getValue()) {
+                // use left node
+                node = node.getLeft();
+            } else {
+                // use right node
+                node = node.getRight();
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Node{" +

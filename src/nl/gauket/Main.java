@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         long startCreate = System.currentTimeMillis();
 
-        int rootValue = 10_000;
+        int rootValue = 50_000;
         BinaryTree binaryTree = new BinaryTree(rootValue);
         binaryTree.createFixedTree(rootValue*2);
 
@@ -16,7 +16,7 @@ public class Main {
 
         long start = System.currentTimeMillis();
 
-        Node node = binaryTree.getRootNode().find(30);
+        Node node = binaryTree.getRootNode().search(30);
 
         System.out.println("Search took: " + (System.currentTimeMillis() - start) + " (ms)");
         System.out.println("Node: " + node.toString());
